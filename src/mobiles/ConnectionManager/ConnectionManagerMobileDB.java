@@ -30,8 +30,8 @@ public class ConnectionManagerMobileDB implements ConnectionManager {
         Connection connection = null;
 
         String password = "";
-        try (BufferedReader br = new BufferedReader(new FileReader(CONFIG))) {
-            password = br.readLine();
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(CONFIG))) {
+            password = bufferedReader.readLine();
             System.out.println(password);
         } catch (IOException e) {
             e.printStackTrace();
